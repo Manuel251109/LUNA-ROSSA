@@ -255,7 +255,7 @@ main > img:hover {
 .section-img-top {
   display: block;
   margin: 0 auto 20px auto;
-  width: 50px;
+  width: 150px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
