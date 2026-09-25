@@ -52,37 +52,34 @@ header img:hover {
 }
 
 /* ============================
-   NAV MENU (STICKY & GLASS)
+   NAV MENU – VERSIONE DEFINITIVA
 ============================ */
 .menu-nav {
-  margin-top: 35px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per riga */
   gap: 10px;
-  position: sticky;
-  top: 15px;
-  z-index: 100;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  padding: 12px 20px;
-  border-radius: 50px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  padding: 12px 15px;
+  background: transparent;
   max-width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .menu-nav a {
-  padding: 8px 16px;
+  text-align: center;
+  padding: 6px 8px;
   background: #ffffff;
-  border-radius: 20px;
+  border-radius: 45px;
   text-decoration: none;
   color: #b30000;
-  font-weight: 600;
-  font-size: 0.88rem;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border: 1px solid rgba(179, 0, 0, 0.15);
+  font-weight: 700;
+  font-size: 0.78rem;     /* più piccolo ma leggibile */
+  border: 2px solid #b30000;
+  line-height: 1.2;
+  white-space: normal;    /* <-- IMPORTANTISSIMO: permette di andare a capo */
+  word-break: break-word; /* <-- evita tagli brutti */
+  transition: all 0.3s ease;
 }
 
 .menu-nav a:hover {
@@ -90,6 +87,19 @@ header img:hover {
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(179, 0, 0, 0.3);
+}
+
+/* MOBILE – PERFETTO SU TELEFONO */
+@media (max-width: 480px) {
+  .menu-nav {
+    grid-template-columns: repeat(3, 1fr); /* sempre 3 per riga */
+    gap: 8px;
+  }
+
+  .menu-nav a {
+    padding: 6px 6px;
+    font-size: 0.70rem;   /* leggermente più piccolo */
+  }
 }
 
 /* ============================
